@@ -1,10 +1,9 @@
 class Solution:
     def reverseBits(self, n: int) -> int:
-        binary = bin(n)[2:]
-        binary = binary.zfill(32)
-        reversed_bin = binary[::-1]
-        integer = int(reversed_bin, 2)
-        return integer
+        binary = bin(n)[2: ].zfill(32)
+        new_binary= binary[: : -1]
+        return int(new_binary,2)
+
 
 # Synced seamlessly with LeetHub Pro
 # Pro features: https://bit.ly/leethubpro | Free version: https://bit.ly/leethubv4
