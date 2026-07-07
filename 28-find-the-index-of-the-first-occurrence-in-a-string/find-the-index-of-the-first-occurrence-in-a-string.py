@@ -1,14 +1,15 @@
 class Solution:
     def strStr(self, haystack: str, needle: str) -> int:
-        end = len(haystack) -1
-        e = len(needle) -1
-        b= 0
-        while e <= end:
+        e = len(needle)-1
+        b = 0
+        while e < len(haystack):
             if haystack[b:e+1] == needle:
                 return b
-            b += 1
+            b+= 1
             e+= 1
+        
         return -1
+        
 
 
 # Synced seamlessly with LeetHub Pro
