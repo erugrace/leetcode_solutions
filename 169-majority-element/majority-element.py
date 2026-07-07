@@ -3,13 +3,14 @@ class Solution:
         dict = {}
         for num in nums:
             if num not in dict:
-                dict[num] = nums.count(num)
+                dict[num] = 1
             else:
-                pass
-        maxV = max(dict.values())
+                dict[num] += 1
+        maxNum = max(dict.values())
         for key in dict.keys():
-            if dict[key] == maxV:
+            if dict[key] == maxNum:
                 return key
+     
 
 # Synced seamlessly with LeetHub Pro
 # Pro features: https://bit.ly/leethubpro | Free version: https://bit.ly/leethubv4
