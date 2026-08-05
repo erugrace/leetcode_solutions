@@ -2,21 +2,23 @@ class Solution:
     def diffWaysToCompute(self, expression: str) -> List[int]:
         op = {"+", "-", "*"}
         def dfs(expr):
-            results = []
+        #Base case
             if not any(c in op for c in expr):
                 return [int(expr)]
+            results = []
+        #recursive form:
             for i,char in enumerate(expr):
-                if char in op:
-                    l = dfs(expr[:i])
-                    r = dfs(expr[i+1:])
-                    for i in l:
-                        for j in r:
-                            if char == "-":
-                                results.append(i - j)
-                            elif char == "+":
-                                results.append(i + j)
-                            else:
-                                results.append(i * j)
+                 if char in op:
+                    left = dfs(expr[:i])
+                    right = dfs(expr[i+1:])
+                    for l in left:
+                         for r in right:
+                                if char == "-":
+                                   results.append(l-r)
+                                elif char == "+":
+                                    results.append(l+r)
+                                else:
+                                    results.append(l*r)
             return results
         return dfs(expression)
 
