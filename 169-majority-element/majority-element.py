@@ -1,15 +1,16 @@
 class Solution:
     def majorityElement(self, nums: List[int]) -> int:
-        dict = {}
+        diction = {}
         for num in nums:
-            if num not in dict:
-                dict[num] = 1
+            if num not in diction:
+                diction[num] = 1
             else:
-                dict[num] += 1
-        maxNum = max(dict.values())
-        for key in dict.keys():
-            if dict[key] == maxNum:
+                diction[num]+=1
+        maxNum = max(diction.values())
+        for key in diction.keys():
+            if diction[key] == maxNum:
                 return key
+        
      
 
 # Synced seamlessly with LeetHub Pro
