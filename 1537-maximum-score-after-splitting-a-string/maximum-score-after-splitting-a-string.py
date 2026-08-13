@@ -1,15 +1,13 @@
 class Solution:
     def maxScore(self, s: str) -> int:
-        left = 0
-        right = len(s)
-        lst =[]
-        m =1
-        while m < right:
-            lefts = s[left:m].count("0")
-            rights = s[m:len(s)].count ("1")
-            lst.append(lefts+ rights)
-            m += 1
-        return max(lst)
+        maxS = 0
+        l = 0
+        for r in range(1,len(s)):
+            left = s[l:r]
+            right = s[r:]
+            count = left.count("0") + right.count("1")
+            maxS = max(count,maxS)
+        return maxS
 
 # Synced seamlessly with LeetHub Pro
 # Pro features: https://bit.ly/leethubpro | Free version: https://bit.ly/leethubv4
