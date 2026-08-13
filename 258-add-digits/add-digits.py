@@ -1,19 +1,11 @@
 class Solution:
     def addDigits(self, num: int) -> int:
-        while num >= 10:
-            total = 0
-
-            while num > 0:
-                # Get the last digit
-                last = num % 10
-                # Add it to total
-                total += last
-                # Remove the last digit
-                num = num // 10
-
-            num = total
-
-        return num
+        if num < 10:
+            return num
+        if num % 9 == 0:
+            return 9
+        else:
+            return num % 9
 
 # Synced seamlessly with LeetHub Pro
 # Pro features: https://bit.ly/leethubpro | Free version: https://bit.ly/leethubv4
