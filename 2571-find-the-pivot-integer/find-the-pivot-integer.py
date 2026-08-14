@@ -1,16 +1,15 @@
 class Solution:
     def pivotInteger(self, n: int) -> int:
         total = 0
-        for num in range(0,n+1):
-            total += num
         left = 0
-        for num in range(1,n+1):
-            left += num
-            right = total - left + num
+        for n in range(n+1):
+            total += n
+        for n in range(1,n+1):
+            left += n
+            right = total - left + n
             if left == right:
-                return num
+                return n
         return -1
-
         
 
 # Synced seamlessly with LeetHub Pro
