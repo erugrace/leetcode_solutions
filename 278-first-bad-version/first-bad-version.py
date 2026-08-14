@@ -3,24 +3,17 @@
 
 class Solution:
     def firstBadVersion(self, n: int) -> int:
-        # Your implementation is correct! 
-        # You have successfully implemented the Binary Search approach.
-        # Time Complexity: O(log n) - Optimal, as we halve the search space each iteration.
-        # Space Complexity: O(1) - Optimal, as we only use a few integer variables.
         if n == 0:
             return 0
-        if isBadVersion(1) == True:
-            return 1
-        l = 1
-        r = n
-        while l < r:
-            mid = (l + r)//2
-            if isBadVersion(mid) == True:
-                r = mid
+        left = 1
+        right = n
+        while left < right:
+            mid = (left + right)//2
+            if isBadVersion(mid):
+                right = mid
             else:
-                l = mid + 1
-        return l
-        # This solution meets the expected complexity. You can now click "Submit"!
+                left = mid + 1
+        return left
 
 # Synced seamlessly with LeetHub Pro
 # Pro features: https://bit.ly/leethubpro | Free version: https://bit.ly/leethubv4
