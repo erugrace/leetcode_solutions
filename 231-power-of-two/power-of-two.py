@@ -2,7 +2,7 @@ class Solution:
     def isPowerOfTwo(self, n: int) -> bool:
         if n == 0:
             return False
-        return (n & (n-1) == 0)
+        return (n-1) & (n) == 0
         
 
 # Synced seamlessly with LeetHub Pro
