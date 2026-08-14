@@ -1,15 +1,13 @@
 class Solution:
     def isPalindrome(self, s: str) -> bool:
-        news = ""
+        newS = ""
         for char in s:
             if char.isalnum():
-                char = char.lower()
-                news = news + char
-        if news == news[::-1]:
+                newS+= char.lower()
+        reverse = newS[::-1]
+        if newS == reverse:
             return True
-        else:
-            return False
-
+        return False
         
 
 # Synced seamlessly with LeetHub Pro
