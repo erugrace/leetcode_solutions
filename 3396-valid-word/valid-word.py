@@ -1,19 +1,20 @@
 class Solution:
     def isValid(self, word: str) -> bool:
         vowels = {"a", "e", "i", "o", "u"}
-        if len(word) < 3:
-            return False
-        has_vowel = False
-        has_consonant = False
-        for s in word:
-            if not s.isalnum():
+        has_vowels = False
+        has_consonants = False
+        if len(word)< 3:
+            return False 
+        for char in word.lower():
+            if not char.isalnum():
                 return False
-            if s.isalpha(): 
-                if s.lower() in vowels:
-                   has_vowel = True
+            if char.isalpha():
+                if char in vowels:
+                   has_vowels = True
                 else:
-                   has_consonant = True
-        return has_vowel and has_consonant
+                    has_consonants = True
+        return has_vowels and has_consonants
+
 
 # Synced seamlessly with LeetHub Pro
 # Pro features: https://bit.ly/leethubpro | Free version: https://bit.ly/leethubv4
