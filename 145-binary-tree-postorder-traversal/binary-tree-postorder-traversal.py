@@ -8,8 +8,7 @@ class Solution:
     def postorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
         if not root:
             return []
-        return self.postorderTraversal(root.left) + self.postorderTraversal(root.right) + [root.val]
-        
+        return self.postorderTraversal(root.left) + self.postorderTraversal(root.right) + [root.val] 
 
 # Synced seamlessly with LeetHub Pro
 # Pro features: https://bit.ly/leethubpro | Free version: https://bit.ly/leethubv4
