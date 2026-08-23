@@ -1,15 +1,12 @@
 class Solution:
     def rob(self, nums: List[int]) -> int:
-        previous_previous = 0
-        previous = 0
-
+        rob1,rob2 = 0,0
         for money in nums:
-            current = max(previous, money + previous_previous)
+            temp = max(rob2,rob1 + money)
+            rob1 = rob2
+            rob2 = temp
+        return rob2
 
-            previous_previous = previous
-            previous = current
-
-        return previous
 
 # Synced seamlessly with LeetHub Pro
 # Pro features: https://bit.ly/leethubpro | Free version: https://bit.ly/leethubv4
