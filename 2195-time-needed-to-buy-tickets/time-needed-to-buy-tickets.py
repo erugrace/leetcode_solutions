@@ -3,15 +3,14 @@ class Solution:
         queue = deque()
         for person in range(len(tickets)):
             queue.append(person)
-        time = 0
+        time  = 0
         while queue:
-            time += 1
             person = queue.popleft()
+            time += 1
             tickets[person] -= 1
-
             if person == k and tickets[person] == 0:
                 return time
-            if tickets[person]> 0:
+            elif tickets[person]>0:
                 queue.append(person)
         return time
         
