@@ -1,17 +1,19 @@
 class Solution:
     def fizzBuzz(self, n: int) -> List[str]:
-        
-        lst = []
+        output= []
         for i in range(1,n+1):
             if i % 3 == 0 and i % 5 == 0:
-                lst.append("FizzBuzz")
+                output.append("FizzBuzz")
             elif i % 3 == 0:
-                lst.append("Fizz")
+                output.append("Fizz")
             elif i % 5 == 0:
-                lst.append("Buzz")
+                output.append("Buzz")
             else:
-                lst.append(str(i))
-        return lst
+                output.append(str(i))
+        return output
+
+
+        
 
 # Synced seamlessly with LeetHub Pro
 # Pro features: https://bit.ly/leethubpro | Free version: https://bit.ly/leethubv4
