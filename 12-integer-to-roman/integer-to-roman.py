@@ -13,14 +13,12 @@ class Solution:
         ]
 
         result = ""
-
         for i in range(len(values)):
             while num >= values[i]:
                 num -= values[i]
                 result += symbols[i]
-
         return result
-        
+
 
 # Synced seamlessly with LeetHub Pro
 # Pro features: https://bit.ly/leethubpro | Free version: https://bit.ly/leethubv4
