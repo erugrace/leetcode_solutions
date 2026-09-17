@@ -1,11 +1,11 @@
 class Solution:
     def rob(self, nums: List[int]) -> int:
-        rob1,rob2 = 0,0
+        rob1, rob2 = 0,0
         for money in nums:
-            temp = max(rob2,rob1 + money)
-            rob1 = rob2
+            temp = max(rob2, rob1 + money)
+            rob1  = rob2
             rob2 = temp
-        return rob2
+        return temp
 
 
 # Synced seamlessly with LeetHub Pro
