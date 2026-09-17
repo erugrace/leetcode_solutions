@@ -1,8 +1,8 @@
 class Solution:
     def reverseWords(self, s: str) -> str:
         wordlst = s.split()
-        wordlst = wordlst[::-1]
-        return " ".join(wordlst)
+        wordlst.reverse()
+        return (" ".join(wordlst))
 
 # Synced seamlessly with LeetHub Pro
 # Pro features: https://bit.ly/leethubpro | Free version: https://bit.ly/leethubv4
