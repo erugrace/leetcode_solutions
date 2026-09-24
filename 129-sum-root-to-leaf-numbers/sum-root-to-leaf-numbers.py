@@ -11,11 +11,11 @@ class Solution:
         def dfs(root, total):
             if not root:
                 return 0
-            total = (total * 10) + root.val
+            total = (total*10) + root.val
             if not root.left and not root.right:
-                return total            
-            return dfs(root.left,total) + dfs(root.right,total)
-        return dfs(root,0) 
+                return total
+            return dfs(root.left, total) + dfs(root.right, total)
+        return dfs(root, 0)
 
 
         
