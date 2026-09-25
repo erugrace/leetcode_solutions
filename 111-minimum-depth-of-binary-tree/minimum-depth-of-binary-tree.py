@@ -7,10 +7,10 @@
 from collections import deque
 class Solution:
     def minDepth(self, root: Optional[TreeNode]) -> int:
+        count = 0
+        queue = deque([root]);
         if not root:
             return 0
-        queue = deque([root])
-        count = 0
         while queue:
             level_size = len(queue)
             for i in range(level_size):
@@ -24,6 +24,9 @@ class Solution:
                     queue.append(node.right)
             count += 1
         return count
+
+
+
 
 
 # Synced seamlessly with LeetHub Pro
