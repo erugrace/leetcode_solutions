@@ -1,1 +1,1 @@
-<h2>sum-of-left-leaves Notes</h2><hr>[ Time taken: 6d 12hrs 29m 0s ]
+<h2>sum-of-left-leaves Notes</h2><hr>[ Time taken: 18d 2hrs 37m 1s ]
