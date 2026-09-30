@@ -9,12 +9,11 @@ class Solution:
         def dfs(node,target):
             if not node:
                 return False
-            target -= node.val
+            target-=node.val
             if not node.left and not node.right and target == 0:
                 return True
             return dfs(node.left, target) or dfs(node.right, target)
-        return dfs(root, targetSum)
-            
+        return dfs(root, targetSum)            
         
 
 # Synced seamlessly with LeetHub Pro
