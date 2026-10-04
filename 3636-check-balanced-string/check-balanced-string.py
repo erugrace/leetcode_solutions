@@ -3,11 +3,14 @@ class Solution:
         odd = 0
         even = 0
         for i in range(len(num)):
-            if i % 2 == 0:
+            if i % 2  == 0:
                 even += int(num[i])
             else:
-                odd+=int(num[i])
-        return odd == even 
+                odd += int(num[i])
+        if even == odd:
+            return True
+        else:
+            return False
         
 
 # Synced seamlessly with LeetHub Pro
