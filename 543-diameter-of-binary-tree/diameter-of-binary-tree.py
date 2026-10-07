@@ -10,15 +10,15 @@ class Solution:
         def dfs(node):
             nonlocal maxVal
             if not node:
-               return -1
-            left  = dfs(node.left)
-            right = dfs(node.right)
-            maxVal  = max(maxVal, left + right + 2)
-            return 1 + max(left, right)
+                return -1
+            left, right = dfs(node.left), dfs(node.right)
+            maxVal = max(maxVal, left+ right + 2)
+            return (1 + max(left,right))
         dfs(root)
-        return maxVal 
-
-                 
+        return maxVal
+            
+            
+        
 
 # Synced seamlessly with LeetHub Pro
 # Pro features: https://bit.ly/leethubpro | Free version: https://bit.ly/leethubv4
