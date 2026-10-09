@@ -1,12 +1,11 @@
 class Solution:
-    def containsDuplicate(self, nums: List[int]) -> bool:
-        seen = set()
-
+    def containsDuplicate(self, nums: list[int]) -> bool:
+        dict = {}
         for num in nums:
-            if num in seen:
+            if num not in dict:
+                dict[num ] = 1
+            else:
                 return True
-            seen.add(num)
-
         return False
 
 # Synced seamlessly with LeetHub Pro
