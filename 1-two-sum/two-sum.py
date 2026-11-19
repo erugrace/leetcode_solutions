@@ -1,9 +1,13 @@
 class Solution:
     def twoSum(self, nums: list[int], target: int) -> list[int]:
-        for l in range(len(nums)):
-            for r in (range((l+1), len(nums))):
-                if nums[l] + nums[r] == target:
-                    return [l,r]
+        complement = {}
+        for i in range(len(nums)):
+            diff = target - nums[i]
+            if diff in complement:
+                return [min(i,complement[diff]), max(i,complement[diff])]
+            else:
+                complement[nums[i]] = i
+        
             
             
         
