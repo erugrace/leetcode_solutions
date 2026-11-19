@@ -1,12 +1,11 @@
 class Solution:
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
-        lst = []
-        for i in range(len(nums)):
-            for j in range(i+1, len(nums)):
-                if nums[i] + nums[j] == target:
-                    return [i,j]
-        return lst
-
+    def twoSum(self, nums: list[int], target: int) -> list[int]:
+        for l in range(len(nums)):
+            for r in (range((l+1), len(nums))):
+                if nums[l] + nums[r] == target:
+                    return [l,r]
+            
+            
         
 
 # Synced seamlessly with LeetHub Pro
